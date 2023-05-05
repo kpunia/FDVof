@@ -3,12 +3,27 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Monaco, monospace;
+    background: linear-gradient(-45deg, #0b3d91, #4b0082, #160b3d, #000033);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 .header {
     display: flex;
     align-items: center;
-    background-color: #001d5f;
+    /*background-color: #001d5f;*/
+    background-color: #00000037;
     color:#ffffff;
     height: 60px;
     padding: 10px;
@@ -26,7 +41,7 @@ body {
 .main-content {
     text-align: center;
     padding: 50px 0;
-    background-color: #16357d;
+    /*background-color: #16357d;*/
     color:#ffffff;
     height: 100vh;
 }
@@ -68,10 +83,14 @@ body {
 #calculate {
     margin-top: 15px;
 }
+.results {
+    margin-top: 75px;
+}
 #coinGecko {
     position: fixed;
     bottom: 0;
     left: 0;
     margin: 15px;
     color: #ffffff;
+    font-size: 12px;
 }
