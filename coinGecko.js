@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const fdv2 = data[1][0].fully_diluted_valuation;
             if (numTokens1 == null) {
                 numTokens1 = data[0][0].fully_diluted_valuation / data[0][0].current_price
-            }
+            }//eth, sol, dot, trx, ton
             // calculate and display the FDV
             const fdv1 = (fdv2 / numTokens1).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
             resultHead.textContent = `The price of ${crypto1} given the FDV of ${crypto2}:`
