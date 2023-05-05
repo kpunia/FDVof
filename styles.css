@@ -23,11 +23,11 @@ body {
     display: flex;
     align-items: center;
     /*background-color: #001d5f;*/
-    background-color: #00000037;
+    background-color: #00000030;
     color:#ffffff;
     height: 60px;
     padding: 10px;
-    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 4px 5px #00000050;
 }
 #logo {
     height: 40px;
@@ -43,7 +43,6 @@ body {
     padding: 50px 0;
     /*background-color: #16357d;*/
     color:#ffffff;
-    text-shadow: 0px 4px 4px #00000080;
     height: 100vh;
 }
 .dropdowns {
@@ -58,22 +57,16 @@ body {
 .dropdown select {
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #8c52ff;
     font-size: 16px;
     appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url('dropdown-arrow.png');
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: 12px;
     cursor: pointer;
-}
-.dropdown img {
-    height: 40px;
-    margin: 0 20px;
+    text-align: center;
+    background-color: #00000037;
+    color: #ffffff;
 }
 #welcome {
+    text-shadow: 0px 4px 4px #00000095;
     font-size: 50px;
     /* margin-bottom: 20px; */
 }
@@ -83,8 +76,15 @@ body {
 }
 #calculate {
     margin-top: 15px;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #8c52ff;
+    color: #ffffff;
+    border: 1px solid #ffffff00;
+    box-shadow: 0px 4px 5px #00000050;
 }
 .results {
+    text-shadow: 0px 4px 4px #00000080;
     margin-top: 50px;
 }
 #coinGecko {
@@ -93,6 +93,6 @@ body {
     left: 0;
     margin: 15px;
     color: #ffffff;
-    text-shadow: 0px 4px 4px #00000080;
+    text-shadow: 0px 2px 3px #00000060;
     font-size: 12px;
 }
