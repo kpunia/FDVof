@@ -68,3 +68,10 @@ body {
 #calculate {
     margin-top: 15px;
 }
+#coinGecko {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 15px;
+    color: #ffffff;
+}
