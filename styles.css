@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #001d5f;
+    color:#ffffff;
+    height: 60px;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+#logo {
+    height: 40px;
+    margin-right: 10px;
+}
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+.main-content {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #16357d;
+    color:#ffffff;
+    height: 100vh;
+}
+.dropdowns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+.dropdown {
+    margin: 0 20px;
+}
+.dropdown select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('dropdown-arrow.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 12px;
+    cursor: pointer;
+}
+.dropdown img {
+    height: 40px;
+    margin: 0 20px;
+}
+#welcome {
+    font-size: 50px;
+    /* margin-bottom: 20px; */
+}
+.swap {
+    width: 150px;
+    height: 50px;
+}
+#calculate {
+    margin-top: 15px;
+}

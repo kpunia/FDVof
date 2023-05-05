@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FDVof</title>
+	<meta charset="UTF-8">
+    <link rel="icon" href="favicon_package/favicon.ico">
+    <!--
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    -->
+    <link rel="stylesheet" href="styles.css">
+    <script src="coinGecko.js"></script>
+</head>
+<body>
+	<header class="header">
+		<img id="logo" src="FDVof.png" alt="Logo">
+		<h1 class="title">FDVof</h1>
+	</header>
+	<div class="main-content">
+		<h2 id="welcome">Show the price of A<br>
+            with the FDV of B</h2>
+		<div class="dropdowns">
+			<div class="dropdown">
+				<select name="crypto1">
+                    <option value="default">~Select~</option>
+					<option value="bitcoin">Bitcoin</option>
+					<option value="ethereum">Ethereum</option>
+					<option value="binancecoin">BNB</option>
+                    <option value="ripple">XRP</option>
+				</select>
+			</div>
+            <img src="Swap.png" alt="Swap" class="swap">
+			<div class="dropdown">
+				<select name="crypto2">
+                    <option value="default">~Select~</option>
+					<option value="bitcoin">Bitcoin</option>
+					<option value="ethereum">Ethereum</option>
+					<option value="binancecoin">BNB</option>
+                    <option value="ripple">XRP</option>
+				</select>
+			</div>
+		</div>
+        <button id="calculate">Calculate FDV</button>
+        <div class="results">
+            <h3 id="result_head"></h3>
+            <div id="result"></div>
+        </div>
+	</div>
+</body>
+</html>
