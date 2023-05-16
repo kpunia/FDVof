@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Monaco, monospace;
-    background: linear-gradient(-45deg, #0b3d91, #4b0082, #160b3d, #000033);
+    background: linear-gradient(-45deg, #1f0035, #160b3d, #000033, #000000);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
@@ -17,6 +17,26 @@ body {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+.stars {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 1px;
+    width: 1px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: -44vw 9vh 2px 1px #fff,-77vw 18vh 3px 1px #fff,95vw -21vh 3px 3px #fff,-62vw 44vh 2px 3px #fff,11vw -1vh 3px 1px #fff,88vw 91vh 0px 2px #fff,-3vw 96vh 0px 3px #fff,5vw -16vh 0px 2px #fff,-97vw 84vh 1px 0px #fff,35vw 69vh 2px 0px #fff,-11vw -57vh 0px 1px #fff,-30vw 52vh 3px 0px #fff,-87vw 48vh 2px 3px #fff,-52vw -1vh 2px 1px #fff,1vw -78vh 0px 2px #fff,-29vw -63vh 0px 0px #fff,-58vw -93vh 2px 2px #fff,61vw 98vh 0px 2px #fff,-92vw -63vh 0px 3px #fff,18vw 51vh 1px 1px #fff,-55vw 51vh 2px 2px #fff,9vw 37vh 1px 2px #fff,86vw 13vh 2px 3px #fff,-18vw -57vh 1px 3px #fff,6vw 35vh 2px 3px #fff,-92vw 64vh 3px 2px #fff,-61vw 86vh 1px 3px #fff,-65vw 65vh 2px 3px #fff,92vw -64vh 2px 2px #fff,67vw 37vh 0px 3px #fff,29vw 3vh 2px 0px #fff,-67vw -73vh 1px 0px #fff,57vw 8vh 3px 2px #fff,39vw -20vh 1px 1px #fff,80vw 36vh 2px 3px #fff,-1vw -62vh 1px 1px #fff,74vw 81vh 0px 1px #fff,-79vw -61vh 1px 0px #fff,71vw -36vh 2px 2px #fff,31vw 67vh 2px 1px #fff,-60vw 43vh 2px 0px #fff,25vw -71vh 1px 0px #fff,-53vw 14vh 0px 1px #fff,-80vw -90vh 2px 1px #fff,90vw 66vh 2px 0px #fff,-100vw 65vh 2px 0px #fff,94vw -67vh 2px 3px #fff,-28vw 44vh 1px 1px #fff,-21vw -45vh 0px 0px #fff,-62vw -14vh 0px 2px #fff,-12vw 77vh 1px 0px #fff,-4vw 22vh 3px 0px #fff,-36vw 50vh 1px 0px #fff,-28vw -15vh 1px 2px #fff,-72vw 24vh 0px 2px #fff,-11vw -91vh 1px 2px #fff,-92vw -14vh 0px 2px #fff,63vw 11vh 1px 2px #fff,-12vw -38vh 2px 3px #fff,86vw -89vh 0px 2px #fff,-17vw 89vh 0px 2px #fff,31vw 57vh 1px 1px #fff,28vw -5vh 1px 0px #fff,29vw 3vh 0px 2px #fff,87vw -51vh 1px 1px #fff,60vw 33vh 3px 3px #fff,-32vw -23vh 3px 2px #fff,99vw 40vh 0px 3px #fff,-40vw -58vh 0px 2px #fff,-47vw -92vh 1px 2px #fff,-77vw 64vh 1px 3px #fff,0vw -38vh 0px 1px #fff,-27vw -72vh 2px 1px #fff,5vw -1vh 1px 0px #fff,-72vw -90vh 0px 2px #fff,18vw -24vh 0px 3px #fff,-24vw 95vh 3px 3px #fff,12vw -4vh 0px 0px #fff,-89vw 15vh 0px 3px #fff,-57vw 60vh 0px 0px #fff,-50vw -10vh 2px 2px #fff,87vw -20vh 3px 3px #fff,15vw 67vh 1px 3px #fff,-52vw 33vh 2px 3px #fff,28vw 10vh 0px 1px #fff,-100vw -89vh 0px 0px #fff,49vw 26vh 1px 3px #fff,-64vw -53vh 0px 1px #fff,91vw -13vh 1px 0px #fff,-22vw -42vh 3px 2px #fff,-82vw -68vh 2px 1px #fff,27vw -14vh 3px 2px #fff,-52vw -65vh 3px 3px #fff,-56vw -28vh 3px 2px #fff,-75vw -64vh 3px 0px #fff,46vw -69vh 3px 1px #fff,54vw -15vh 1px 3px #fff,59vw -55vh 3px 1px #fff,-40vw 95vh 1px 2px #fff,2vw -6vh 3px 0px #fff,-8vw -3vh 0px 3px #fff,31vw 28vh 3px 0px #fff,22vw -32vh 3px 1px #fff,-65vw 44vh 1px 2px #fff,-55vw -22vh 2px 0px #fff,-92vw 80vh 2px 2px #fff,-8vw 60vh 0px 0px #fff,-59vw -60vh 2px 1px #fff,52vw -25vh 3px 3px #fff,58vw -59vh 3px 3px #fff,-74vw 87vh 2px 1px #fff,81vw -46vh 2px 3px #fff,-60vw 81vh 1px 0px #fff,-36vw -75vh 3px 1px #fff,73vw -10vh 3px 3px #fff,-82vw -51vh 2px 2px #fff,-65vw 16vh 2px 0px #fff,-21vw -78vh 2px 0px #fff,76vw 23vh 0px 3px #fff,57vw 57vh 2px 0px #fff,47vw 98vh 0px 1px #fff,81vw 9vh 1px 2px #fff,21vw -51vh 3px 2px #fff,-73vw 96vh 2px 0px #fff,75vw 69vh 3px 2px #fff,-72vw -97vh 2px 1px #fff,72vw -63vh 1px 3px #fff,-26vw -73vh 1px 2px #fff,-60vw -24vh 3px 3px #fff,-68vw 82vh 3px 3px #fff,99vw -51vh 2px 3px #fff,66vw -45vh 1px 3px #fff,96vw -94vh 2px 3px #fff,-41vw -16vh 2px 0px #fff,-63vw -33vh 2px 2px #fff,-63vw -77vh 2px 1px #fff,90vw -93vh 0px 2px #fff,95vw 37vh 3px 0px #fff,-76vw -43vh 2px 1px #fff,83vw 98vh 0px 1px #fff,91vw 14vh 2px 1px #fff,64vw -48vh 0px 0px #fff,-74vw 91vh 1px 2px #fff,-85vw -24vh 1px 1px #fff,-31vw -59vh 1px 3px #fff,-29vw -18vh 3px 0px #fff,-67vw -3vh 3px 3px #fff,-5vw -86vh 1px 0px #fff,-26vw -14vh 2px 1px #fff,-19vw 95vh 0px 2px #fff,58vw -80vh 0px 1px #fff,98vw -20vh 0px 1px #fff,-93vw 12vh 0px 1px #fff,25vw 5vh 1px 0px #fff,-80vw -87vh 3px 2px #fff,-33vw 41vh 3px 3px #fff,-18vw -93vh 1px 0px #fff,64vw 48vh 1px 3px #fff,47vw 92vh 1px 0px #fff,-12vw -1vh 1px 0px #fff,-67vw 38vh 2px 0px #fff,-25vw 0vh 1px 0px #fff,34vw 68vh 1px 0px #fff,61vw -25vh 0px 3px #fff,5vw 46vh 1px 3px #fff,89vw 28vh 2px 3px #fff,75vw -89vh 3px 0px #fff,-33vw 21vh 1px 3px #fff,-28vw 88vh 2px 0px #fff,56vw -20vh 0px 1px #fff,23vw 57vh 3px 0px #fff,-11vw 91vh 3px 1px #fff,-68vw -32vh 3px 2px #fff,29vw -76vh 3px 1px #fff,90vw 24vh 1px 3px #fff,70vw 71vh 1px 2px #fff,-59vw 56vh 2px 1px #fff,38vw 39vh 3px 0px #fff,-93vw 17vh 0px 1px #fff,-86vw 57vh 0px 0px #fff,-29vw 100vh 2px 1px #fff,-40vw -24vh 3px 1px #fff,-49vw -61vh 0px 3px #fff,-41vw -21vh 2px 3px #fff,-90vw -61vh 3px 2px #fff,-26vw -21vh 2px 1px #fff,65vw 26vh 3px 1px #fff,97vw -29vh 2px 0px #fff,-9vw 56vh 3px 1px #fff,43vw -59vh 2px 3px #fff,53vw 75vh 0px 2px #fff,74vw 33vh 2px 2px #fff,22vw 71vh 1px 2px #fff,60vw 9vh 3px 0px #fff,100vw -56vh 2px 0px #fff,-32vw 69vh 2px 0px #fff,-11vw 81vh 1px 2px #fff,-69vw 7vh 2px 0px #fff,63vw 68vh 3px 0px #fff,-71vw 32vh 2px 2px #fff,-23vw 45vh 3px 3px #fff,0vw -3vh 2px 2px #fff,-30vw -14vh 2px 1px #fff,-26vw 13vh 2px 2px #fff,40vw -31vh 1px 2px #fff,-48vw -19vh 3px 0px #fff,46vw 33vh 0px 1px #fff,-33vw -35vh 3px 3px #fff,-35vw -7vh 2px 2px #fff,-41vw 45vh 2px 1px #fff,-27vw -35vh 2px 3px #fff,16vw 31vh 2px 0px #fff,-20vw 11vh 3px 3px #fff,5vw -33vh 0px 1px #fff,38vw -2vh 3px 1px #fff,10vw 2vh 1px 2px #fff,12vw -22vh 1px 2px #fff,46vw 14vh 0px 3px #fff,2vw 36vh 2px 2px #fff,24vw 19vh 3px 2px #fff,-13vw 30vh 0px 1px #fff,17vw 39vh 3px 1px #fff,5vw 8vh 0px 1px #fff,-25vw 7vh 3px 1px #fff,-40vw 18vh 1px 3px #fff,-29vw 19vh 3px 3px #fff,11vw -41vh 1px 3px #fff,-36vw -22vh 0px 2px #fff,17vw -27vh 0px 2px #fff,-9vw 9vh 3px 2px #fff,-40vw -25vh 2px 0px #fff,-17vw 28vh 2px 1px #fff,10vw 3vh 1px 1px #fff,-25vw 42vh 1px 0px #fff,10vw -14vh 1px 2px #fff,36vw 42vh 0px 3px #fff,-15vw -27vh 0px 1px #fff,-45vw 13vh 1px 3px #fff,-36vw -38vh 2px 3px #fff,-3vw 14vh 3px 1px #fff,5vw 50vh 1px 3px #fff,-16vw -47vh 0px 0px #fff,-34vw 21vh 0px 1px #fff,43vw -22vh 0px 1px #fff,44vw 2vh 1px 3px #fff,49vw 2vh 1px 1px #fff,-8vw -26vh 2px 0px #fff,-11vw -13vh 0px 2px #fff,-33vw -22vh 2px 2px #fff,35vw -25vh 3px 0px #fff,-22vw 7vh 0px 3px #fff,-21vw -6vh 1px 3px #fff,2vw 5vh 0px 0px #fff,-14vw 15vh 1px 0px #fff,-6vw 3vh 3px 3px #fff,23vw 8vh 1px 1px #fff,5vw 7vh 1px 3px #fff,-7vw -8vh 3px 2px #fff,0vw 9vh 3px 1px #fff,5vw -9vh 0px 0px #fff,11vw -15vh 2px 3px #fff,5vw 20vh 3px 2px #fff,-3vw 17vh 3px 0px #fff,-3vw -14vh 3px 0px #fff,-19vw 14vh 3px 1px #fff,16vw 5vh 0px 1px #fff,-1vw -19vh 2px 3px #fff,22vw -17vh 0px 1px #fff,-23vw -24vh 3px 0px #fff,22vw 2vh 1px 1px #fff,-19vw -21vh 0px 2px #fff,-10vw -7vh 2px 0px #fff,-23vw -25vh 1px 0px #fff,2vw -12vh 0px 2px #fff,-7vw -5vh 2px 1px #fff;
+    animation: zoom 60s alternate infinite;
+    z-index: -1;
+}
+@keyframes zoom {
+    0%{
+        transform: scale(.45);
+    }
+    100%{
+        transform: scale(1.3);
     }
 }
 .header {
@@ -51,19 +71,49 @@ body {
     justify-content: center;
     margin-top: 50px;
 }
-.dropdown {
+.selectize-control {
     margin: 0 20px;
-}
-.dropdown select {
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #8c52ff;
     font-size: 16px;
-    appearance: none;
-    cursor: pointer;
-    text-align: center;
-    background-color: #00000037;
+}
+.selectize-dropdown {
+    background-color: #160b3d !important;
+    width: 200px !important;
+    border-radius: 5px !important;
+}
+.selectize-dropdown-content .option {
     color: #ffffff;
+}
+.selectize-dropdown-content div.option.selected {
+    background: #ffffff !important;
+    color: #160b3d !important;
+}
+.selectize-dropdown-content div.option.active {
+    background: #ffffff !important;
+    color: #160b3d !important;
+}
+.selectize-input {
+    background: #160b3d !important;
+    color: #ffffff !important;
+    width: 200px !important;
+    border-radius: 5px !important;
+}
+.selectize-input input {
+    color: #ffffff !important;
+}
+.selectize-input:after {
+    visibility: hidden;
+}
+#name, #valuation {
+    background: #160b3d;
+    color: #ffffff;
+    width: 100px;
+    margin: 0 0px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 4px 5px #00000050;
+    font-family: Monaco, monospace;
 }
 #welcome {
     text-shadow: 0px 4px 4px #00000095;
@@ -74,7 +124,7 @@ body {
     width: 100px;
     height: 30px;
 }
-#calculate {
+#calculate, #add {
     margin-top: 15px;
     border-radius: 5px;
     padding: 5px;

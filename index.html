@@ -9,75 +9,97 @@
     -->
     <link rel="stylesheet" href="styles.css">
     <script src="coinGecko.js"></script>
+
+    <!--JQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <!--SelectizeJS for search bar-->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/css/selectize.default.min.css"
+        integrity="sha512-pTaEn+6gF1IeWv3W1+7X7eM60TFu/agjgoHmYhAfLEU8Phuf6JKiiE8YmsNC0aCgQv4192s4Vai8YZ6VNM6vyQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.15.2/js/selectize.min.js"
+        integrity="sha512-IOebNkvA/HZjMM7MxL0NYeLYEalloZ8ckak+NDtOViP7oiYzG5vn6WVXyrJDiJPhl4yRdmNAG49iuLmhkUdVsQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    ></script>
 </head>
 <body>
+    <div class="stars"></div>
 	<header class="header">
 		<img id="logo" src="FDVof.png" alt="Logo">
 		<h1 class="title">FDVof</h1>
 	</header>
 	<div class="main-content">
-		<h2 id="welcome">Show the price of A<br>
-            with the FDV of B</h2>
+		<h2 id="welcome">Show the price of A with<br>
+            the FDV of B</h2>
+
+        <div id="manual" style="display: none;">
+            <label for="new-crypto-name">Name:</label>
+            <input type="text" id="name" placeholder="Bitcoin" autocomplete="off">
+        
+            <label for="new-crypto-value">Private Valuation: $</label>
+            <input type="text" id="valuation" placeholder="569084487478" autocomplete="off">
+            <br>
+            <button id="add">Add</button>
+        </div>
+
 		<div class="dropdowns">
 			<div class="dropdown">
-				<select name="crypto1">
-                    <option value="default">~Select A~</option>
+				<select name="crypto1" placeholder="Select A">
+                    <option value=""></option>
+                    <option value="manual">Add New</option>
+
 					<option value="bitcoin">Bitcoin</option>
 					<option value="ethereum">Ethereum</option>
 					<option value="binancecoin">BNB</option>
                     <option value="ripple">XRP</option>
                     <option value="cardano">Cardano</option>
                     <option value="staked-ether">Lido Staked Ether</option>
-                    <!-- Doesn't have enough data
                     <option value="dogecoin">Dogecoin</option>
-                    -->
                     <option value="matic-network">Polygon</option>
                     <option value="solana">Solana</option>
                     <option value="polkadot">Polkadot</option>
                     <option value="litecoin">Litecoin</option>
                     <option value="tron">TRON</option>
-                    <!-- Doesn't have enough data
                     <option value="shiba-inu">Shiba Inu</option>
-                    -->
                     <option value="avalanche-2">Avalanche</option>
                     <option value="wrapped-bitcoin">Wrapped Bitcoin</option>
                     <option value="uniswap">Uniswap</option>
                     <option value="chainlink">Chainlink</option>
-                    <!-- Doesn't have enough data
                     <option value="leo-token">LEO Token</option>
-                    -->
                     <option value="the-open-network">Toncoin</option>
                     <option value="okb">OKB</option>
 				</select>
 			</div>
             <img src="Swap.png" alt="Swap" class="swap">
 			<div class="dropdown">
-				<select name="crypto2">
-                    <option value="default">~Select B~</option>
+				<select name="crypto2" placeholder="Select B">
+                    <option value=""></option>
+                    <option value="manual">Add New</option>
+
 					<option value="bitcoin">Bitcoin</option>
 					<option value="ethereum">Ethereum</option>
 					<option value="binancecoin">BNB</option>
                     <option value="ripple">XRP</option>
                     <option value="cardano">Cardano</option>
                     <option value="staked-ether">Lido Staked Ether</option>
-                    <!-- Doesn't have enough data
                     <option value="dogecoin">Dogecoin</option>
-                    -->
                     <option value="matic-network">Polygon</option>
                     <option value="solana">Solana</option>
                     <option value="polkadot">Polkadot</option>
                     <option value="litecoin">Litecoin</option>
                     <option value="tron">TRON</option>
-                    <!-- Doesn't have enough data
                     <option value="shiba-inu">Shiba Inu</option>
-                    -->
                     <option value="avalanche-2">Avalanche</option>
                     <option value="wrapped-bitcoin">Wrapped Bitcoin</option>
                     <option value="uniswap">Uniswap</option>
                     <option value="chainlink">Chainlink</option>
-                    <!-- Doesn't have enough data
                     <option value="leo-token">LEO Token</option>
-                    -->
                     <option value="the-open-network">Toncoin</option>
                     <option value="okb">OKB</option>
 				</select>
@@ -90,5 +112,21 @@
         </div>
 	</div>
     <p id="coinGecko">Powered by CoinGecko</p>
+
+    <!-- Selectize script -->
+    <script>
+        $(document).ready(function(){
+            $('select').selectize( {
+                onChange: function(value) {
+                    if (value === "manual") {
+                        $("#manual").show();
+                    } else {
+                        $("#manual").hide();
+                    }
+                }   
+            });
+        });
+    </script>
+    
 </body>
 </html>
