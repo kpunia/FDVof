@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     calculateButton.addEventListener("click", function() {
 
         // retrieve selected cryptos from dropdown menus
+        const currency = document.querySelector('#currency').value
         const selectCrypto1 = document.querySelector('[name=crypto1]');
         const selectCrypto2 = document.querySelector('[name=crypto2]')
         const crypto1 = selectCrypto1.value;
@@ -24,7 +25,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             resultHead.textContent = `A and B cannot both be manual entries`
             resultElement.textContent = ""
         } else if (crypto1.substring(0, 1) == "$") {
-            fetch(`${apiEndpoint}?vs_currency=usd&ids=${crypto2}&sparkline=false`)
+            fetch(`${apiEndpoint}?vs_currency=${currency}&ids=${crypto2}&sparkline=false`)
             .then(response => response.json())
             .then(data => {
                 const valuation1 = +crypto1.substring(1)
@@ -34,13 +35,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     fdv2 = data[0].circulating_supply * data[0].current_price
                 }
 
-                const price1 = (price2 / fdv2 * valuation1).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+                const price1 = (price2 / fdv2 * valuation1).toLocaleString('en-US', { style: 'currency', currency: currency });
                 resultHead.textContent = `${crypto1Name} with the FDV of ${crypto2Name}:`
                 resultElement.textContent = price1;
             })
             .catch(error => console.error('Error:', error));
         } else if (crypto2.substring(0, 1) == "$") {
-            fetch(`${apiEndpoint}?vs_currency=usd&ids=${crypto1}&sparkline=false`)
+            fetch(`${apiEndpoint}?vs_currency=${currency}&ids=${crypto1}&sparkline=false`)
             .then(response => response.json())
             .then(data => {
                 var numTokens1 = data[0].max_supply
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         numTokens1 = data[0].fully_diluted_valuation / data[0].current_price
                     }
                 }
-                const price1 = (valuation2 / numTokens1).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+                const price1 = (valuation2 / numTokens1).toLocaleString('en-US', { style: 'currency', currency: currency });
                 resultHead.textContent = `${crypto1Name} with the private valuation of ${crypto2Name}:`
                 resultElement.textContent = price1;
             })
@@ -61,8 +62,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         } else {
             // make HTTP requests to API endpoint to get crypto prices
             const promises = [
-                fetch(`${apiEndpoint}?vs_currency=usd&ids=${crypto1}&sparkline=false`),
-                fetch(`${apiEndpoint}?vs_currency=usd&ids=${crypto2}&sparkline=false`)
+                fetch(`${apiEndpoint}?vs_currency=${currency}&ids=${crypto1}&sparkline=false`),
+                fetch(`${apiEndpoint}?vs_currency=${currency}&ids=${crypto2}&sparkline=false`)
             ];
 
             // confusing
@@ -85,7 +86,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 }// doge, shiba, leo
                 
                 // calculate and display the FDV
-                const price1 = (fdv2 / numTokens1).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+                const price1 = (fdv2 / numTokens1).toLocaleString('en-US', { style: 'currency', currency: currency });
                 resultHead.textContent = `${crypto1Name} with the FDV of ${crypto2Name}:`
                 resultElement.textContent = price1;
             })
@@ -106,6 +107,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         selectizeA.addOption({value: valuation, text: name});
         selectizeB.addOption({value: valuation, text: name});
 
+        document.getElementById('name').value = '';
+        document.getElementById('valuation').value = '';
         document.getElementById('manual').style.display = 'none';
     });
 })
