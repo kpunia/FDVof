@@ -33,18 +33,26 @@
 	<header class="header">
 		<img id="logo" src="FDVof.png" alt="Logo">
 		<h1 class="title">FDVof</h1>
+        <div id="currency-selector">
+            <select id="currency">
+                <option value="usd">USD</option>
+                <option value="eur">EUR</option>
+                <option value="gbp">GBP</option>
+                <!-- Add as many currencies as you want -->
+            </select>
+        </div>
 	</header>
 	<div class="main-content">
-		<h2 id="welcome">Show the price of A with<br>
-            the FDV of B</h2>
+		<h2 id="welcome">Show the price of <span style="color:#8c52ff;">A</span> with<br>
+            the FDV of <span style="color:#8c52ff;">B</span></h2>
 
         <div id="manual" style="display: none;">
             <label for="new-crypto-name">Name:</label>
             <input type="text" id="name" placeholder="Bitcoin" autocomplete="off">
-        
+            &nbsp;&nbsp;
             <label for="new-crypto-value">Private Valuation: $</label>
             <input type="text" id="valuation" placeholder="569084487478" autocomplete="off">
-            <br>
+            &nbsp;&nbsp;
             <button id="add">Add</button>
         </div>
 
@@ -116,7 +124,7 @@
     <!-- Selectize script -->
     <script>
         $(document).ready(function(){
-            $('select').selectize( {
+            $('[name=crypto1], [name=crypto2]').selectize( {
                 onChange: function(value) {
                     if (value === "manual") {
                         $("#manual").show();
