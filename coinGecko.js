@@ -97,10 +97,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Adding manual cryptocurrency
     document.getElementById('add').addEventListener('click', function() {
         var name = document.getElementById('name').value;
-        var valuation = "$" + document.getElementById('valuation').value;
+        var valuation = document.getElementById('valuation').value;
     
-        // You may want to do some validation on newCryptoName and newCryptoValue here
-    
+        // Validation for Private Valuation
+        if (isNaN(valuation)) {
+            alert("Please enter a number for Private Valuation");
+            return;
+        }
+
+        valuation = "$" + valuation;
+
         var selectizeA = $('select[name=crypto1]')[0].selectize;
         var selectizeB = $('select[name=crypto2]')[0].selectize;
     
