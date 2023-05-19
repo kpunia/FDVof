@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 resultElement.textContent = price1;
             })
             .catch(error => {
-                alert('Error: ' + error);
+                alert('Error: Too many requests right now. Please try again later');
                 console.error('Error:', error);
             });
         }
