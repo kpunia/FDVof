@@ -62,7 +62,7 @@
             <label for="new-crypto-name">Name:</label>
             <input type="text" id="name" placeholder="Bitcoin" autocomplete="off">
             &nbsp;&nbsp;
-            <label for="new-crypto-value">Private Valuation: $</label>
+            <label for="new-crypto-value">Private Valuation:</label>
             <input type="text" id="valuation" placeholder="569084487478" autocomplete="off">
             &nbsp;&nbsp;
             <button id="add">Add</button>
@@ -72,56 +72,56 @@
 			<div class="dropdown">
 				<select name="crypto1" placeholder="Select A">
                     <option value=""></option>
-                    <option value="manual">Add New</option>
+                    <option value="!manual">Add New</option>
 
-					<option value="bitcoin">Bitcoin</option>
-					<option value="ethereum">Ethereum</option>
-					<option value="binancecoin">BNB</option>
-                    <option value="ripple">XRP</option>
-                    <option value="cardano">Cardano</option>
-                    <option value="staked-ether">Lido Staked Ether</option>
-                    <option value="dogecoin">Dogecoin</option>
-                    <option value="matic-network">Polygon</option>
-                    <option value="solana">Solana</option>
-                    <option value="polkadot">Polkadot</option>
-                    <option value="litecoin">Litecoin</option>
-                    <option value="tron">TRON</option>
-                    <option value="shiba-inu">Shiba Inu</option>
-                    <option value="avalanche-2">Avalanche</option>
-                    <option value="wrapped-bitcoin">Wrapped Bitcoin</option>
-                    <option value="uniswap">Uniswap</option>
-                    <option value="chainlink">Chainlink</option>
-                    <option value="leo-token">LEO Token</option>
-                    <option value="the-open-network">Toncoin</option>
-                    <option value="okb">OKB</option>
+					<option value="0bitcoin">Bitcoin</option>
+					<option value="1ethereum">Ethereum</option>
+					<option value="2binancecoin">BNB</option>
+                    <option value="3ripple">XRP</option>
+                    <option value="4cardano">Cardano</option>
+                    <option value="5staked-ether">Lido Staked Ether</option>
+                    <option value="6dogecoin">Dogecoin</option>
+                    <option value="7matic-network">Polygon</option>
+                    <option value="8solana">Solana</option>
+                    <option value="9polkadot">Polkadot</option>
+                    <option value=":litecoin">Litecoin</option>
+                    <option value=":tron">TRON</option>
+                    <option value=":shiba-inu">Shiba Inu</option>
+                    <option value=":avalanche-2">Avalanche</option>
+                    <option value=":wrapped-bitcoin">Wrapped Bitcoin</option>
+                    <option value=":uniswap">Uniswap</option>
+                    <option value=":chainlink">Chainlink</option>
+                    <option value=":leo-token">LEO Token</option>
+                    <option value=":the-open-network">Toncoin</option>
+                    <option value=":okb">OKB</option>
 				</select>
 			</div>
             <img src="Swap.png" alt="Swap" class="swap">
 			<div class="dropdown">
 				<select name="crypto2" placeholder="Select B">
                     <option value=""></option>
-                    <option value="manual">Add New</option>
+                    <option value="!manual">Add New</option>
 
-					<option value="bitcoin">Bitcoin</option>
-					<option value="ethereum">Ethereum</option>
-					<option value="binancecoin">BNB</option>
-                    <option value="ripple">XRP</option>
-                    <option value="cardano">Cardano</option>
-                    <option value="staked-ether">Lido Staked Ether</option>
-                    <option value="dogecoin">Dogecoin</option>
-                    <option value="matic-network">Polygon</option>
-                    <option value="solana">Solana</option>
-                    <option value="polkadot">Polkadot</option>
-                    <option value="litecoin">Litecoin</option>
-                    <option value="tron">TRON</option>
-                    <option value="shiba-inu">Shiba Inu</option>
-                    <option value="avalanche-2">Avalanche</option>
-                    <option value="wrapped-bitcoin">Wrapped Bitcoin</option>
-                    <option value="uniswap">Uniswap</option>
-                    <option value="chainlink">Chainlink</option>
-                    <option value="leo-token">LEO Token</option>
-                    <option value="the-open-network">Toncoin</option>
-                    <option value="okb">OKB</option>
+					<option value="0bitcoin">Bitcoin</option>
+					<option value="1ethereum">Ethereum</option>
+					<option value="2binancecoin">BNB</option>
+                    <option value="3ripple">XRP</option>
+                    <option value="4cardano">Cardano</option>
+                    <option value="5staked-ether">Lido Staked Ether</option>
+                    <option value="6dogecoin">Dogecoin</option>
+                    <option value="7matic-network">Polygon</option>
+                    <option value="8solana">Solana</option>
+                    <option value="9polkadot">Polkadot</option>
+                    <option value=":litecoin">Litecoin</option>
+                    <option value=":tron">TRON</option>
+                    <option value=":shiba-inu">Shiba Inu</option>
+                    <option value=":avalanche-2">Avalanche</option>
+                    <option value=":wrapped-bitcoin">Wrapped Bitcoin</option>
+                    <option value=":uniswap">Uniswap</option>
+                    <option value=":chainlink">Chainlink</option>
+                    <option value=":leo-token">LEO Token</option>
+                    <option value=":the-open-network">Toncoin</option>
+                    <option value=":okb">OKB</option>
 				</select>
 			</div>
 		</div>
@@ -138,13 +138,14 @@
     <script>
         $(document).ready(function(){
             $('[name=crypto1], [name=crypto2]').selectize( {
+                sortField: 'value',
                 onChange: function(value) {
-                    if (value === "manual") {
+                    if (value === "!manual") {
                         $("#manual").show();
                     } else {
                         $("#manual").hide();
                     }
-                }   
+                }
             });
         });
     </script>

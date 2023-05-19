@@ -12,8 +12,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const currency = document.querySelector('#currency').value
         const selectCrypto1 = document.querySelector('[name=crypto1]');
         const selectCrypto2 = document.querySelector('[name=crypto2]')
-        const crypto1 = selectCrypto1.value;
-        const crypto2 = selectCrypto2.value;
+        // get rid of the first character which is there for sorting
+        const crypto1 = selectCrypto1.value.substring(1);
+        const crypto2 = selectCrypto2.value.substring(1);
         const crypto1Name = selectCrypto1.options[selectCrypto1.selectedIndex].text;
         const crypto2Name = selectCrypto2.options[selectCrypto2.selectedIndex].text;
 
