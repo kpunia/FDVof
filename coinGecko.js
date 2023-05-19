@@ -40,7 +40,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 resultHead.textContent = `${crypto1Name} with the FDV of ${crypto2Name}:`
                 resultElement.textContent = price1;
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+                alert('Error: ' + error);
+                console.error('Error:', error);
+            });
         } else if (crypto2.substring(0, 1) == "$") {
             fetch(`${apiEndpoint}?vs_currency=${currency}&ids=${crypto1}&sparkline=false`)
             .then(response => response.json())
@@ -59,7 +62,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 resultHead.textContent = `${crypto1Name} with the private valuation of ${crypto2Name}:`
                 resultElement.textContent = price1;
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+                alert('Error: ' + error);
+                console.error('Error:', error);
+            });
         } else {
             // make HTTP requests to API endpoint to get crypto prices
             const promises = [
@@ -91,7 +97,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 resultHead.textContent = `${crypto1Name} with the FDV of ${crypto2Name}:`
                 resultElement.textContent = price1;
             })
-            .catch(error => console.error('Error:', error));
+            .catch(error => {
+                alert('Error: ' + error);
+                console.error('Error:', error);
+            });
         }
     })
 
@@ -106,7 +115,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             return;
         }
 
-        valuation = "$" + valuation;
+        valuation = "$$" + valuation;
 
         var selectizeA = $('select[name=crypto1]')[0].selectize;
         var selectizeB = $('select[name=crypto2]')[0].selectize;
