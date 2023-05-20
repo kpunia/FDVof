@@ -69,7 +69,7 @@ body {
     border: none;
 }
 #currency-selector select:focus option {
-    color: #000000;
+    background-color: transparent !important;
 }
 #world {
     height: 20px;
