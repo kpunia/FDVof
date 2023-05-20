@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 resultElement.textContent = price1;
             })
             .catch(error => {
-                alert('Error: ' + error);
+                alert('CoinGecko is processing too many calls right now. Please try again later');
                 console.error('Error:', error);
             });
         } else if (crypto2.substring(0, 1) == "$") {
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 resultElement.textContent = price1;
             })
             .catch(error => {
-                alert('Error: ' + error);
+                alert('CoinGecko is processing too many calls right now. Please try again later');
                 console.error('Error:', error);
             });
         } else {
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 resultElement.textContent = price1;
             })
             .catch(error => {
-                alert('Error: Too many requests right now. Please try again later');
+                alert('CoinGecko is processing too many calls right now. Please try again later');
                 console.error('Error:', error);
             });
         }
