@@ -87,10 +87,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     else {
                         numTokens1 = data[0][0].fully_diluted_valuation / data[0][0].current_price
                     }
-                }// eth, sol, dot, trx, ton || doge, shiba, leo
+                }// eth, sol, dot, trx, ton, usdt, usdc, busd, apt || doge, shiba, leo, atom, xmr, tusd
                 if (fdv2 == null) {
                     fdv2 = data[1][0].circulating_supply * data[1][0].current_price
-                }// doge, shiba, leo
+                }// doge, shiba, leo, atom, xmr, tusd
                 
                 // calculate and display the FDV
                 const price1 = (fdv2 / numTokens1).toLocaleString('en-US', { style: 'currency', currency: currency });
