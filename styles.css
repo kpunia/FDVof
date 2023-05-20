@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Monaco, monospace;
-    background: linear-gradient(-45deg, #1f0035, #1a0d4c, #000033, #000000);
+    background: linear-gradient(-45deg, #1f0035, #140b39, #000033, #000000);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
 }
@@ -65,8 +65,11 @@ body {
     background-color: #ffffff00;
     color: #ffffff;
     padding: 5px;
-    /*border-radius: 5px;*/
+    border-radius: 5px;
     border: none;
+}
+#currency-selector select:focus option {
+    color: #000000;
 }
 #world {
     height: 20px;
