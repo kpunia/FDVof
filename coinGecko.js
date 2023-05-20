@@ -22,7 +22,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         const resultHead = document.getElementById('result_head');
         const resultElement = document.getElementById('result');
         
-        if (crypto1.substring(0, 1) == "$" && crypto2.substring(0, 1) == "$") {
+        if (crypto1 == "" || crypto2 == "") {
+            resultHead.textContent = `Please select a coin`
+            resultElement.textContent = ""
+        } else if (crypto1.substring(0, 1) == "$" && crypto2.substring(0, 1) == "$") {
             resultHead.textContent = `A and B cannot both be manual entries`
             resultElement.textContent = ""
         } else if (crypto1.substring(0, 1) == "$") {
