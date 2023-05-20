@@ -68,10 +68,6 @@ body {
     /*border-radius: 5px;*/
     border: none;
 }
-#currency-selector select:focus option {
-    background-color: transparent !important;
-    color: #ffffff;
-}
 #world {
     height: 20px;
 }
