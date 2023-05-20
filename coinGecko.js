@@ -61,9 +61,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
                         numTokens1 = data[0].fully_diluted_valuation / data[0].current_price
                     }
                 }
+                const priceRatio = +(valuation2 / numTokens1 / data[0].current_price).toFixed(2);
                 const price1 = (valuation2 / numTokens1).toLocaleString('en-US', { style: 'currency', currency: currency });
                 resultHead.textContent = `${crypto1Name} with the private valuation of ${crypto2Name}:`
-                resultElement.textContent = price1;
+                if (priceRatio >= 1) {
+                    resultElement.innerHTML = `${price1} <span style="color: lime;">(${priceRatio}x)</span>`;
+                } else {
+                    resultElement.innerHTML = `${price1} <span style="color: red;">(${priceRatio}x)</span>`;
+                }
+                //resultElement.textContent = `${price1} (${priceRatio}x)`
             })
             .catch(error => {
                 alert('CoinGecko is processing too many calls right now. Please try again later');
@@ -96,9 +102,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 }// doge, shiba, leo, atom, xmr, tusd
                 
                 // calculate and display the FDV
+                const priceRatio = +(fdv2 / numTokens1 / data[0][0].current_price).toFixed(2);
                 const price1 = (fdv2 / numTokens1).toLocaleString('en-US', { style: 'currency', currency: currency });
                 resultHead.textContent = `${crypto1Name} with the FDV of ${crypto2Name}:`
-                resultElement.textContent = price1;
+                if (priceRatio >= 1) {
+                    resultElement.innerHTML = `${price1} <span style="color: lime;">(${priceRatio}x)</span>`;
+                } else {
+                    resultElement.innerHTML = `${price1} <span style="color: red;">(${priceRatio}x)</span>`;
+                }
+                //resultElement.textContent = `${price1} (${priceRatio}x)`
             })
             .catch(error => {
                 alert('CoinGecko is processing too many calls right now. Please try again later');
