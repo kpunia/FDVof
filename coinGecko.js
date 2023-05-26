@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     else {
                         numTokens1 = data[0][0].fully_diluted_valuation / data[0][0].current_price
                     }
-                }// eth, sol, dot, trx, ton, usdt, usdc, busd, apt || doge, shiba, leo, atom, xmr, tusd
+                }// eth, sol, dot, trx, ton, usdt, usdc, busd, apt, cro, near || doge, shiba, leo, atom, xmr, tusd
                 if (fdv2 == null) {
                     fdv2 = data[1][0].circulating_supply * data[1][0].current_price
                 }// doge, shiba, leo, atom, xmr, tusd
