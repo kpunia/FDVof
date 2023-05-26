@@ -173,6 +173,12 @@ body {
     text-shadow: 0px 4px 4px #00000080;
     margin-top: 50px;
 }
+#result_head {
+    font-size: 20px;
+}
+#result {
+    font-size: 30px;
+}
 #coinGecko {
     position: fixed;
     bottom: 0;
