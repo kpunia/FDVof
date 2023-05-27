@@ -140,7 +140,7 @@ body {
 .selectize-input:after {
     visibility: hidden;
 }
-#name, #valuation {
+#name, #valuation, #supply {
     background: #160b3d;
     color: #ffffff;
     width: 100px;
